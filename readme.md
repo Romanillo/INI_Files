@@ -1,6 +1,4 @@
-# ETSII ULL Grado de Ingeniería Informática 
-
-# Asignatura: Procesadores de Lenguajes
+# ETSII ULL Grado de Ingeniería Informática, Procesadores de Lenguajes
 
 ## Práctica 3: Ficheros INI.
 
@@ -12,4 +10,3 @@ cabeceras, etc.
 
 * [Gh-page](http://romanillo.github.io/INI_Files/)
 * [Pruebas](http://romanillo.github.io/INI_Files/tests/)
-
