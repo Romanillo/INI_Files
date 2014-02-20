@@ -1,9 +1,28 @@
 html *
 {
    font-size: large; 
-   /* The !important ensures that nothing can override what you've set in this style (unless it is also important). */
    font-family: Arial;
 }
+
+body
+{
+ background-color: #F7F8E0;
+}
+
+a:link   
+{   
+	text-decoration:none;  
+	color:#000;
+}   
+
+#dragdrop {
+        width:40%;
+        background-color: #F6E3CE;
+		border: 1px dashed rgb(0,0,0);
+        color: black;
+        padding: 3% 10%;
+        text-align: center;
+      }
 
 .thumb {
     height: 75px;
@@ -11,32 +30,96 @@ html *
     margin: 10px 5px 0 0;
   }
 
-h1            { text-align: center; font-size: x-large; }
-th, td        { vertical-align: top; text-align: left; }   
-/* #finaltable  * { color: white; background-color: black; }   */
+button, .button {
+cursor: pointer;
+font-family: sans-serif;
+text-decoration:none;
+line-height: normal;
+margin: 0px 0px 1.25rem;
+position: relative;
+text-align: center;
+display: inline-block;
+padding: 1.0625rem 2rem 1rem;
+font-size: 1rem;
+background-color: #F5BCA9;
+color: black;
+transition: background-color 300ms ease-out 3s;
+border: medium none;
+font-weight: normal !important;
+}
+  
+table.table_out {
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  margin-left:auto; 
+  margin-right:auto;
+  min-width: 1400px;
+  max-width: 1400px;
+  
+  border-spacing: 8px;
+  border-collapse: separate;
+}
 
-/* #finaltable table { border-collapse:collapse; } */
-/* #finaltable table, td { border:1px solid white; } */
-#finaltable:hover td { background-color: blue; } 
-tr:nth-child(odd)    { background-color:#eee; }
-tr:nth-child(even)    { background-color:#00FF66; }
-input        { text-align: right;  border: none;       }     /* Align input to the right  */
-textarea     { border: outset; border-color: white;       }                        
-table        { border: inset; border-color: white; }
+table.table_out td        { vertical-align: top; text-align: left;} 
+table.table_out th        { vertical-align: top; font-size: 150%;} 
+
+td.output_content {
+   padding: 15px;
+   border-style: none;
+   background-color: white;
+   max-width: 2000px;
+   overflow-x: auto;
+}
+
+td.input_content {
+   padding: 25px;
+   border-style: none;
+   background-color: white;
+   max-width: 2000px;
+   overflow-x: auto;
+}
+
+h1 {
+  font-size: 200%;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+p{
+  font-family: cursive;
+}
+
+#footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+
+/*td.td_output  {max-height: 800px; display: block; overflow-y: scroll; overflow-x: hidden; } */
+
 .hidden      { display: none; }
 .unhidden    { display: block; }
-table.center { margin-left:auto; margin-right:auto; }
-#result      { border-color: red; }
-tr.error       { background-color: red; }
-pre.output   { background-color: white; }
-span.repeated { background-color: red }
-span.header { background-color: blue }
-span.comments { background-color: orange }
-span.blanks { background-color: green }
-span.nameEqualValue { background-color: cyan }
-span.error { background-color: red }
 
-body
-{
- background-color:#b0c4de;  /* blue */
-}
+.o1_output {color: black; font-weight: bold; }
+
+.repeated                    { background-color: #F5A9A9; transition:.3s;} 
+.repeated:hover              { background-color: #FA5858; transition:.3s;} 
+
+.header                      { background-color: #CEE3F6; transition:.3s;}
+.header:hover                { background-color: #81BEF7; transition:.3s;}
+
+.comments                    { background-color: #F5F6CE; transition:.3s; }
+.comments:hover              { background-color: #F3F781; transition:.3s; }
+
+.blanks                      { background-color: #F2F2F2; transition:.3s; }
+.blanks:hover                { background-color: #D8D8D8; transition:.3s; }
+
+.nameEqualValue              { background-color: #D8F6CE; transition:.3s; }
+.nameEqualValue:hover        { background-color: #9FF781; transition:.3s; }
+
+.error                       { background-color: #F5A9A9; transition:.3s; }
+.error:hover                 { background-color: #FA5858; transition:.3s; }
+
+

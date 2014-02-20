@@ -1,36 +1,48 @@
+<!DOCTYPE html>
 <html>
   <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-     <title>INI files</title>
-	 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>INI files</title>
+	
     <link rel="shortcut icon" href="etsiiull.png" type="image/x-icon">
 	<link href="global.css" rel="stylesheet" type="text/css">				<!-- CSS -->
-	
+
     <script src="http://underscorejs.org/underscore.js"> </script> 			<!-- Underscore -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"> </script> 	<!-- JQuery -->
-    <script type="text/javascript" src="ini.js"></script> 					<!-- Javascript -->
-  </head>
-  <body>
-  <center>
+    <script type="text/javascript" src="ini.js"></script>					<!-- Javascript -->
+	</head>
+	<body>
+	<center>
 
-    <h1>INI files</h1>
-	
-    <input type="file" id="fileinput" />
-	<br>
+	<h1>Ficheros INI</h1>
+	</h3>
+	<h3>
+	<button><a href="tests/index.html">Pruebas</a></button> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button><a href="https://github.com/Romanillo/INI_Files">Repositorio</a></button> </h3>
+	<hr>
+	<p>Introduzca ficheros para parsearlos por tokens</p>
+      <div class="input" id="dragdrop">Arrastre aqui los ficheros</div>
+      <br>
+	  <input type="file" id="fileinput" />
     <div id="out" class="hidden">
-    <table>
+	
+    <table class="table_out">
       <tr><th>Original</th><th>Tokens</th></tr>
       <tr>
-        <td>
+        <td class="input_content">
           <pre class="input" id="initialinput"></pre>
         </td>
-        <td>
+        <td class="output_content">
           <pre class="output" id="finaloutput"></pre>
         </td>
       </tr>
     </table>
     </div>
-	
 	</center>
+	<hr>
+	<div class="footer">
+		<p> by Román Weissbacher Rodríguez </p>
+	</div>
   </body>
 </html>
