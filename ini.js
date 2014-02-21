@@ -95,7 +95,6 @@ function tokensToString(tokens) {
 }
 
 function lexer(input) {
-  var multiline      = /([^\\]*)\\/;
   var blanks		 = /^\s+/;
   var iniheader		 = /^\[([^\t\n]+)\](?=\s+)/;
   var comments		 = /^[;#](.*)/;
@@ -121,17 +120,6 @@ function lexer(input) {
 	}
 	else if (m = nameEqualValue.exec(input)) {
 	  input = input.substr(m.index+m[0].length);
-	  
-	  var m2;
-	  while(m2 = multiline.exec(m[2]))
-	  {
-	    var nextline_match = anycontent.exec(input);
-	    input = input.substr(nextline_match[0].length);
-		
-		m[2] = m2[1] + nextline_match[1];
-		m[0] = m[0] + nextline_match[1];
-	  }
-	  
 	  out.push({ type: 'nameEqualValue', match: m });
 	}
 	else if (m = any.exec(input)) {
